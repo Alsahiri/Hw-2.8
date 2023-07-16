@@ -1,12 +1,14 @@
 package com.example.hw2_8;
 
-import org.springframework.stereotype.Service;
+import java.util.Collection;
 
 public interface EmployeeService {
 
-    void addEmployee(String firstName, String lastName);
+    Employee addEmployee(String firstName, String lastName, int department, int salary);
 
-    void removeEmployee(String firstName, String lastName);
+    Employee removeEmployee(String firstName, String lastName, int department, int salary);
 
-    void findEmployee(String firstName, String lastName);
+    Employee findEmployee(String firstName, String lastName, int department, int salary);
+
+    Collection<Employee> findAll();
 }
