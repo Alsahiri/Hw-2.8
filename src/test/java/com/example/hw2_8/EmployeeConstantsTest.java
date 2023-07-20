@@ -23,12 +23,12 @@ public class EmployeeConstantsTest {
     public static final int DEPARTMENT_ID1 = 1;
     public static final int DEPARTMENT_ID2 = 2;
 
-    public static final Employee MAX_SALARY_EMPLOYEE = new Employee(FIRST_NAME1, LAST_NAME1, MAX_SALARY,DEPARTMENT_ID1);
-    public static final Employee MIN_SALARY_EMPLOYEE = new Employee(FIRST_NAME2, LAST_NAME2, MIN_SALARY,DEPARTMENT_ID1);
-    public static final Employee OTHER_DEPARTMENT_EMPLOYEE = new Employee(FIRST_NAME3, LAST_NAME3, MIN_SALARY,DEPARTMENT_ID2);
+    public static final Employee MAX_SALARY_EMPLOYEE = new Employee(FIRST_NAME1, LAST_NAME1,DEPARTMENT_ID1,MAX_SALARY);
+    public static final Employee MIN_SALARY_EMPLOYEE = new Employee(FIRST_NAME2, LAST_NAME2,DEPARTMENT_ID1, MIN_SALARY);
+    public static final Employee OTHER_DEPARTMENT_EMPLOYEE = new Employee(FIRST_NAME3, LAST_NAME3,DEPARTMENT_ID2, MIN_SALARY);
 
     public static final List<Employee> EMPLOYEES = List.of(MAX_SALARY_EMPLOYEE, MIN_SALARY_EMPLOYEE);
-    public static final List<Employee> DIFFERENT_DEPARTMENT_EMPLOYEES = List.of(MAX_SALARY_EMPLOYEE, MIN_SALARY_EMPLOYEE, OTHER_DEPARTMENT_EMPLOYEE);
+    public static final List<Employee> DIFFERENT_DEPARTMENT_EMPLOYEES = List.of(MAX_SALARY_EMPLOYEE, OTHER_DEPARTMENT_EMPLOYEE, MIN_SALARY_EMPLOYEE);
 
     public static final int DEPARTMENT_TOTAL_SALARY = EMPLOYEES.stream()
             .mapToInt(Employee::getSalary).sum();
